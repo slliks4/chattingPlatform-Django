@@ -1,0 +1,496 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.active{
+  background-color: green;
+}
+.offline{
+  background-color: red;
+}
+.error{
+  color: red;
+  text-decoration: none;
+}
+.header_toggle{
+  left: -1000px;
+}
+.section_toggle{
+  left: 0;
+  width: 100%;
+}
+body{
+  position: relative;
+  background-color: rgba(245, 245, 245, 0.541);
+}
+section{
+  width: 100%;
+  transition: .4s ease-in-out;
+}
+
+
+/* 404_PAGE */
+
+.error_page{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.error_page video{
+  width: 100vw;
+  object-fit: cover;
+  height: 100vh;
+}
+.error_page .text{
+  position: absolute;
+  color: white;
+}
+.error_page h3{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+}
+.error_page h1{
+  font-size: 60px;
+  text-transform: capitalize;
+}
+
+
+
+/* LOGIN_PAGE */
+
+
+.login{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login>div:nth-child(1){
+  box-shadow: 1px 3px 10px 2px silver;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 70vh;
+}
+.login>div:nth-child(1) form{
+  padding: 40px;
+  width: 50%;
+}
+.login>div:nth-child(1) form h1{
+  color: rgb(10, 10, 255);
+  text-transform: capitalize;
+  text-align: center;
+}
+.login>div:nth-child(1) form .error{
+  text-align: center;
+  margin: 20px 0px 0px;
+}
+.login>div:nth-child(1) form .input{
+  margin-top: 10px;
+}
+.login>div:nth-child(1) form input{
+  padding: 15px;
+  font-size: 15px;
+  width: 100%;
+  margin: 10px 0px;
+  outline: none;
+  border: 1px solid silver;
+  transition: .2s ease-in-out;
+}
+.login>div:nth-child(1) form input:focus{
+  box-shadow: 1px 3px 10px 2px silver;
+}
+.login>div:nth-child(1) form input::placeholder{
+  text-transform: capitalize;
+}
+.login>div:nth-child(1) form a{
+  display: block;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+  text-align: center;
+  margin: 10px 0px 20px;
+}
+.login>div:nth-child(1) form button{
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-transform: capitalize;
+  background-color: rgb(10, 10, 255);
+  border: none;
+  color: white;
+  transition: .2s ease-in-out;
+  box-shadow: 1px 3px 10px 5px silver;
+  cursor: pointer;
+}
+.login>div:nth-child(1) form button:hover{
+  box-shadow: none;
+}
+.login>div:nth-child(1) .overlay{
+  background-color: rgb(33, 37, 41);
+  color: white;
+  width: 50%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.login>div:nth-child(1) .overlay .image{
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.login>div:nth-child(1) .overlay .image img{
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid silver;
+  border-radius: 50%;
+}
+.login>div:nth-child(1) .overlay .text{
+  text-align: center;
+}
+.login>div:nth-child(1) .overlay .text h1{
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.login>div:nth-child(1) .overlay .text p{
+  line-height: 25px;
+}
+
+/* NOTIFICATIONS_DESIGN */
+
+header{
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0px;
+  border-right: 1px solid silver;
+}
+header div:nth-child(1){
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header div:nth-child(2){
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notification_design{
+  width: 100%;
+}
+.notification_design>div:nth-of-type(1){
+  display: flex;
+  height: 100vh;
+  border: 1px solid rgb(33, 37, 41);
+}
+.notification_design>div:nth-of-type(1) .left{
+  width: 35%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 20px;
+  background-color: white;
+  border-right: 1px solid rgb(33, 37, 41);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.notification_design>div:nth-of-type(1) .left h1{
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.notification_design>div:nth-of-type(1) .left .form{
+  display: flex;
+  margin: 20px 0px;
+  border: 1px solid silver;
+}
+.notification_design>div:nth-of-type(1) .left .form input{
+  width: 80%;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+.notification_design>div:nth-of-type(1) .left .form button{
+  width: 20%;
+  padding: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+  background-color: rgb(10, 10, 255);
+  color: white;
+  border: none;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(1){
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(1) .flex_item{
+  position: relative;
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  text-transform: capitalize;
+  border-radius: 12px;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(1) .flex_item .image{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(1) .flex_item .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(1) .flex_item .dot{
+  position: absolute;
+  right: 15px;
+  top: 50px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(1) .flex_item button{
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) h3{
+  text-transform: capitalize;
+  font-weight: 400;
+  margin: 10px 0px;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) .flex_item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid silver;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) .flex_item .image{
+  width: 50px;
+  height: 50px;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) .flex_item .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) .flex_item .dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) .flex_item .text{
+  width: 60%;
+  display: block;
+  color: black;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) .flex_item .text button{
+  padding: 0px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) .flex_item .text h3{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) .flex_item .text p{
+  font-size: 15px;
+}
+.notification_design>div:nth-of-type(1) .left>div:nth-of-type(2) .flex_item .time{
+  width: 10%;
+  font-size: 15px;
+}
+.notification_design>div:nth-of-type(1) .right{
+  width: 60%;
+  height: 100%;
+  padding: 0px 20px;
+  background-color: white;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.notification_design>div:nth-of-type(1) .right .head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+  border-bottom: 1px solid silver;
+}
+.notification_design>div:nth-of-type(1) .right .head .profile{
+  display: flex;
+  align-items: center;
+}
+.notification_design>div:nth-of-type(1) .right .head .profile .image{
+  width: 50px;
+  height: 50px;
+}
+.notification_design>div:nth-of-type(1) .right .head .profile .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.notification_design>div:nth-of-type(1) .right .head .profile h3{
+  margin-left: 10px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.notification_design>div:nth-of-type(1) .right .head .options button{
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background-color: transparent;
+  border: 1px solid silver;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.notification_design>div:nth-of-type(1) .right .body{
+  height: 79%;
+}
+.notification_design>div:nth-of-type(1) .right .chat_box{
+  height: 90%;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.notification_design>div:nth-of-type(1) .right .chat_box .receiver{  
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.notification_design>div:nth-of-type(1) .right .chat_box .receiver .image{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.notification_design>div:nth-of-type(1) .right .chat_box .receiver .image img{
+  width: 100%;
+  height: 100%;
+  border: 1px solid silver;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.notification_design>div:nth-of-type(1) .right .chat_box .receiver .text{
+  border: 1px solid rgb(10, 10, 255);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 70%;
+}
+.notification_design>div:nth-of-type(1) .right .chat_box .sender{  
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.notification_design>div:nth-of-type(1) .right .chat_box .sender .image{
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+.notification_design>div:nth-of-type(1) .right .chat_box .sender .image img{
+  width: 100%;
+  height: 100%;
+  border: 1px solid silver;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.notification_design>div:nth-of-type(1) .right .chat_box .sender .text{
+  border: 1px solid rgb(33, 37, 41);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 70%;
+}
+.notification_design>div:nth-of-type(1) .right form{
+  display: flex;
+  height: 10%;
+  border: 1px solid black;
+}
+.notification_design>div:nth-of-type(1) .right form input{
+  height: 100%;
+  width: 90%;
+  padding: 0px 10px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+.notification_design>div:nth-of-type(1) .right form input::placeholder{
+  text-transform: capitalize;
+}
+.notification_design>div:nth-of-type(1) .right form button{
+  width: 10%;
+  font-size: 15px;
+  border: none;
+  background-color: rgb(10, 10, 255);
+  color: white;
+}
+.notification_design>div:nth-of-type(1) .right .chat_default{
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.notification_design>div:nth-of-type(1) .right .chat_default h1{
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 400;
+}
+.notification_design>div:nth-of-type(1) .right .chat_default span{
+  color: red;
+}
+.notification_design>div:nth-of-type(1) .right .chat_default p:nth-of-type(1){
+  margin: 20px 0px;
+  text-transform: capitalize;
+  font-size: 18px;
+  text-align: center;
+}
+.notification_design>div:nth-of-type(1) .right .chat_default p:nth-of-type(2){
+  background-color: rgba(192, 192, 192, 0.438);
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 18px;
+}
+.notification_design>div:nth-of-type(1) .right .chat_default p:nth-of-type(2) a{
+  text-transform: capitalize;
+  text-decoration: none;
+  color: rgb(10, 10, 255);
+}

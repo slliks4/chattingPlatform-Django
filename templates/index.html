@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Chatting app</title>
+</head>
+<body>
+    <section>
+        <div class="notification_design">
+            <div>
+                <header>
+                    <div>
+                        <i class="fa fa-commenting" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </div>
+                </header>
+                <div class="left">
+                    <h1>chats</h1>
+                    <form action="" class="form">
+                        <input type="search" name="" id="">
+                        <button>                
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <div>
+                        <div class="flex_item">
+                            <div class="image">
+                                <img src="/media/images/team skills.jpg" alt="">
+                            </div>
+                            <div class="offline dot"></div>
+                            <form action="">
+                              <button>skills</button>
+                            </form>
+                        </div>
+                        <div class="flex_item">
+                            <div class="image">
+                                <img src="/media/images/security.png" alt="">
+                            </div>
+                            <div class="active dot"></div>
+                            <form action="">
+                              <button>skills</button>
+                            </form>
+                        </div>
+                        <div class="flex_item">
+                            <div class="image">
+                                <img src="/media/images/student.jpg" alt="">
+                            </div>
+                            <div class="active dot"></div>
+                            <form action="">
+                              <button>george</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>recent</h3>
+                        {% for user in followers %}
+                          <div class="flex_item">
+                              <div class="image">
+                                  <img src="/media/images/student.jpg" alt="">
+                              </div>
+                              <form action="{% url 'chat_box' user.id %}" class="text">
+                                <button>
+                                    <h3>
+                                      {{user}}
+                                    </h3>
+                                    <p>some to maks the end  .....</p>
+                                </button>
+                              </form>
+                              <div class="time">
+                                  02:40
+                              </div>
+                              <div class="status">
+                                <div class="active dot"></div>
+                              </div>
+                          </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="right">
+                  <div class="chat_default">
+                    <div>
+                      <h1>
+                        connect with all <span>security</span> from here
+                      </h1>
+                      <p>
+                        select active and start chatting <span>:)</span>
+                      </p>
+                      <p>
+                        Messages and calls are end-to-end encrypted. No one outside of this chat, not even Mr-soft, can read or listen to them. <a href="">tap to learn more</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
