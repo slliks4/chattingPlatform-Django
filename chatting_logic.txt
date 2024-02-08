@@ -1,0 +1,5 @@
+______ TO GET ALL CHAT FOR A PARTICULAR USING FILTER
+
+    messages = Message.objects.filter((models.Q(sender=request.user) & models.Q(receiver=user)) |
+        (models.Q(sender=user) & models.Q(receiver=request.user))
+    ).order_by('timestamp')
